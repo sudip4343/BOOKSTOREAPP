@@ -1,0 +1,35 @@
+###
+GET http://localhost:4004/odata/v4/amazon-web-services/Books
+
+###
+POST http://localhost:4004/odata/v4/amazon-web-services/Books
+Content-Type: application/json
+
+{
+  "book_id": "7",
+  "book_name": "hOUSE OF CARDS"
+}
+
+
+###
+POST http://localhost:4004/odata/v4/amazon-web-services/BookandAuthors
+Content-Type: application/json
+
+{
+  "book_id": "1"
+  
+}
+
+
+###
+PATCH  http://localhost:4004/odata/v4/amazon-web-services/Books/3
+Content-Type: application/json
+
+{
+  
+  "book_name": "Alchemist"
+}
+
+###
+DELETE   http://localhost:4004/odata/v4/amazon-web-services/Books/3
+
