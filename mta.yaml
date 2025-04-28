@@ -28,6 +28,10 @@ modules:
       - name: bookstoreapp_2-db
       - name: bookstoreapp_2-connectivity
       - name: bookstoreapp_2-destination
+      - name: sud-autoscaler
+        parameters:
+          path: ./autoscaler.json
+
 
   - name: bookstoreapp_2-db-deployer
     type: hdb
@@ -84,3 +88,8 @@ resources:
     parameters:
       service: destination
       service-plan: lite
+  - name: sud-autoscaler
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: autoscaler
+      service-plan: standard
